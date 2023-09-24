@@ -4,4 +4,8 @@ jobs:
   explore-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - run: "echo Hello world"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: node -v
